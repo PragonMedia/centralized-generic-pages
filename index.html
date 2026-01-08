@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>GuidePath - Navigate Life's Important Choices with Clarity</title>
+    <title id="dynamic-title">GuidePath</title>
     <meta
       name="description"
       content="Explore options, compare information, and connect with qualified providers across healthcare, finance, legal, and more. Your trusted resource for informed decisions."
@@ -3526,11 +3526,12 @@
               <h2
                 class="mt-3 font-heading text-3xl font-semibold text-foreground md:text-4xl"
               >
-                How GuidePath Works
+                How <span class="company-name-dynamic">GuidePath</span> Works
               </h2>
               <p class="mt-4 text-lg text-muted-foreground">
-                We make it easy to explore your options and find the guidance
-                you need — at your own pace.
+                We are an independent informational and lead generation platform
+                that helps connect consumers with third-party providers. We do
+                not provide insurance, financial, or legal services directly.
               </p>
             </div>
             <div class="mt-16 grid gap-8 md:grid-cols-3">
@@ -3939,7 +3940,7 @@
               <div>
                 <span
                   class="text-sm font-medium uppercase tracking-wider text-primary"
-                  >Why GuidePath</span
+                  >Why <span class="company-name-dynamic">GuidePath</span></span
                 >
                 <h2
                   class="mt-3 font-heading text-3xl font-semibold text-foreground md:text-4xl"
@@ -3948,9 +3949,10 @@
                 </h2>
                 <p class="mt-4 text-lg leading-relaxed text-muted-foreground">
                   We believe everyone deserves access to clear information when
-                  making important decisions. GuidePath provides a starting
-                  point for your research — connecting you with resources and
-                  providers when you're ready.
+                  making important decisions.
+                  <span class="company-name-dynamic">GuidePath</span> provides a
+                  starting point for your research — connecting you with
+                  resources and providers when you're ready.
                 </p>
                 <div class="mt-10 space-y-6">
                   <div class="flex gap-4">
@@ -4074,6 +4076,10 @@
                     </div>
                   </div>
                 </div>
+                <p class="mt-6 text-center text-sm text-muted-foreground">
+                  Our site is independently operated and is not affiliated with
+                  any government agency or official benefit program.
+                </p>
               </div>
               <div class="relative">
                 <div class="rounded-2xl bg-card p-8 shadow-card">
@@ -4196,10 +4202,11 @@
                       <p
                         class="mt-1 text-sm leading-relaxed text-muted-foreground"
                       >
-                        GuidePath is an informational platform that helps
-                        connect users with third-party providers. We are not an
-                        insurance company, lender, law firm, or direct provider
-                        of any services displayed on this site.
+                        <span class="company-name-dynamic">GuidePath</span> is
+                        an informational platform that helps connect users with
+                        third-party providers. We are not an insurance company,
+                        lender, law firm, or direct provider of any services
+                        displayed on this site.
                       </p>
                     </div>
                   </div>
@@ -4479,7 +4486,8 @@
               class="flex flex-col items-center justify-between gap-4 md:flex-row"
             >
               <p class="text-sm text-muted-foreground">
-                © 2025 GuidePath. All rights reserved.
+                © 2025 <span class="company-name-dynamic">GuidePath</span>. All
+                rights reserved.
               </p>
               <p
                 class="text-xs text-muted-foreground max-w-xl text-center md:text-right"
@@ -4543,6 +4551,18 @@
         companyNameElements.forEach((element) => {
           element.textContent = companyName;
         });
+        // Update all elements with company-name-dynamic class
+        const dynamicCompanyNameElements = document.querySelectorAll(
+          ".company-name-dynamic"
+        );
+        dynamicCompanyNameElements.forEach((element) => {
+          element.textContent = companyName;
+        });
+        // Update the page title dynamically
+        const titleElement = document.getElementById("dynamic-title");
+        if (titleElement) {
+          titleElement.textContent = companyName;
+        }
       })();
     </script>
   </body>
