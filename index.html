@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title id="dynamic-title">GuidePath</title>
     <meta
+      id="dynamic-description"
       name="description"
       content="Explore options, compare information, and connect with qualified providers across healthcare, finance, legal, and more. Your trusted resource for informed decisions."
     />
@@ -4562,6 +4563,17 @@
         const titleElement = document.getElementById("dynamic-title");
         if (titleElement) {
           titleElement.textContent = companyName;
+        }
+        // Update the meta description dynamically
+        const descriptionElement = document.getElementById(
+          "dynamic-description"
+        );
+        if (descriptionElement) {
+          descriptionElement.setAttribute(
+            "content",
+            companyName +
+              " - Explore options, compare information, and connect with qualified providers across healthcare, finance, legal, and more. Your trusted resource for informed decisions."
+          );
         }
       })();
     </script>
